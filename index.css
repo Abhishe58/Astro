@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 3;
+}
+.material-symbols-outlined {
+  font-size: 35px;
+}
+.heroSection {
+  position: relative;
+  padding-top: 67px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-rows: 155px;
+}
+.boxes {
+  position: relative;
+  height: 155px;
+  width: 100%;
+  border: 1px solid #f9f9f9;
+  overflow: hidden;
+}
+.boxesb {
+  grid-area: 5 / 1 / 3 / 7;
+  padding: 10px 10px;
+  height: initial;
+  width: 100%;
+  border: 1px solid #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.boxImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+.heroTitle {
+  font-size: 3rem;
+}
+.heroSubTitle {
+  font-size: 2rem;
+}
+.ctaa {
+  position: relative;
+  padding: 10px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 3s;
+}
+#ctaIco {
+  position: relative;
+  color: white;
+  font-size: 22px;
+  transform: rotate(45deg);
+  transition: 3s;
+}
+.ctaa:hover #ctaIco {
+  transform: rotate(360deg);
+}
+.aboutSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("imgb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+.aboutTitle {
+  font-size: 3rem;
+}
+.aboutSubtitle {
+  font-size: 2rem;
+}
+.aboutDes {
+  width: 60%;
+}
+.aboutTitle,
+.aboutSubtitle,
+.aboutDes {
+  text-align: center;
+  animation: opaani ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 10%;
+}
+@keyframes opaani {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.ctaButb {
+  position: relative;
+  padding: 10px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 3s;
+}
+#ctaRocket {
+  position: relative;
+  font-size: 22px;
+  transition: 3s;
+}
+.ctaButb:hover #ctaRocket {
+  transform: translateY(-40px);
+}
+.planetSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: black;
+}
+.planetContainer {
+  position: relative;
+  padding: 1rem;
+  height: 40vh;
+  display: flex;
+  background-color: black;
+  cursor: pointer;
+  animation: opaani 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 10%;
+}
+.planetImg {
+  height: 100%;
+}
+.planetBox {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.planetBox::after {
+  content: "EARTH";
+  position: absolute;
+  font-size: 15rem;
+  font-weight: 600;
+  color: #333;
+}
+.planetDes {
+  font-size: 18px;
+  z-index: 1;
+  color: white;
+}
+.planetContainerb {
+  position: relative;
+  padding: 1rem;
+  height: 40vh;
+  display: flex;
+  background-color: white;
+  cursor: pointer;
+  animation: opaani 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 10%;
+}
+.planetBoxb {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.planetBoxb::after {
+  content: "MARS";
+  position: absolute;
+  font-size: 15rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.3);
+}
+.planetDesb {
+  font-size: 18px;
+  z-index: 1;
+  color: black;
+}
+.planetBoxc {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.planetBoxc::after {
+  content: "SATURN";
+  position: absolute;
+  font-size: 15rem;
+  font-weight: 600;
+  color: #333;
+}
+.planetBoxd {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.planetBoxd::after {
+  content: "VENUS";
+  position: absolute;
+  font-size: 15rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.3);
+}
+footer {
+  position: relative;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.footerWoa {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.footerContainera {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.footerContainerb {
+  position: relative;
+  height: auto;
+  width: 50%;
+}
+.footerrImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.footerwob {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uniFont {
+  font-size: 15rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  background-image: url("imgb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* @keyframes stxt {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+} */
+
+@media (max-width: 1046px) {
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-auto-rows: 125px;
+  }
+  .boxes {
+    height: 125px;
+  }
+  .planetBox::after {
+    font-size: 10rem;
+  }
+  .planetBoxb::after {
+    font-size: 10rem;
+  }
+  .planetBoxc::after {
+    font-size: 10rem;
+  }
+  .planetBoxd::after {
+    font-size: 10rem;
+  }
+  .uniFont {
+    font-size: 9rem;
+  }
+  .heroTitle,
+  .aboutTitle {
+    font-size: 2rem;
+  }
+  .heroSubTitle,
+  .aboutSubtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1011px) {
+  .planetBox::after {
+    font-size: 8rem;
+  }
+  .planetBoxb::after {
+    font-size: 8rem;
+  }
+  .planetBoxc::after {
+    font-size: 8rem;
+  }
+  .planetBoxd::after {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+  }
+  .boxes {
+    height: 100px;
+  }
+  .boxesb {
+    grid-area: 5 / 1 / 2 / 6;
+  }
+  .planetBox::after {
+    font-size: 5rem;
+  }
+  .planetBoxb::after {
+    font-size: 5rem;
+  }
+  .planetBoxc::after {
+    font-size: 5rem;
+  }
+  .planetBoxd::after {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .uniFont {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 727px) {
+  .planetContainer,
+  .planetContainerb {
+    height: auto;
+    flex-direction: column;
+  }
+  .planetImg {
+    width: 100%;
+  }
+  .aboutSection {
+    background-size: auto;
+  }
+}
+
+@media (max-width: 689px) {
+  .uniFont {
+    font-size: 5rem;
+  }
+  .footerWoa {
+    flex-direction: column;
+  }
+  .footerContainera,
+  .footerContainerb {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .uniFont {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 80px;
+  }
+  .boxes {
+    height: 80px;
+  }
+}
+
+@media (max-width: 415px) {
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-auto-rows: 70px;
+  }
+  .boxes {
+    height: 70px;
+  }
+  .boxesb {
+    grid-area: 6 / 1 / 2 / 6;
+  }
+}
+
+@media (max-width: 375px) {
+  .uniFont {
+    font-size: 2rem;
+  }
+  .boxesb {
+    grid-area: 8 / 1 / 2 / 6;
+  }
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-auto-rows: 60px;
+  }
+  .boxes {
+    height: 60px;
+  }
+  .planetBox::after {
+    font-size: 4rem;
+  }
+  .planetBoxb::after {
+    font-size: 4rem;
+  }
+  .planetBoxc::after {
+    font-size: 4rem;
+  }
+  .planetBoxd::after {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 285px) {
+  .heroSection {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-auto-rows: 50px;
+  }
+  .boxes {
+    height: 50px;
+  }
+  .boxesb {
+    grid-area: 10 / 1 / 2 / 6;
+  }
+  .planetBox::after {
+    font-size: 3rem;
+  }
+  .planetBoxb::after {
+    font-size: 3rem;
+  }
+  .planetBoxc::after {
+    font-size: 3rem;
+  }
+  .planetBoxd::after {
+    font-size: 3rem;
+  }
+}
